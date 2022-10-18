@@ -35,7 +35,7 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-           name: {{ template "fullname" . }}
+           name: {{ .Values.service.name }}
            port:
              number: 80
     host: {{ .Values.ingress.host }}
